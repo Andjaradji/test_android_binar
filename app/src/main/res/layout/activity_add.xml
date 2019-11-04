@@ -1,97 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="4dp"
-    android:orientation="vertical"
-    android:padding="4dp"
-    tools:context=".ui.AddActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/hint_nama" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etNamaBarang"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/bg_edit_text"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:singleLine="true" />
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:context=".ui.AddActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/hint_tanggal" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/hint_nama" />
 
-    <EditText
-        android:id="@+id/etTanggal"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/bg_edit_text"
-        android:cursorVisible="false"
-        android:drawableEnd="@drawable/ic_arrow_drop_down_blue_24dp"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:hint="@string/hint_date_format"
-        android:inputType="none"
-        android:padding="5dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+            android:id="@+id/etNamaBarang"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_edit_text"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            tools:text="Keju"
+            android:singleLine="true" />
 
-    <DatePicker
-        android:id="@+id/dp_tanggal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        android:scaleX="1"
-        android:scaleY="0.9"
-        android:visibility="gone" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/hint_tanggal" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/hint_jumlah_barang" />
+        <EditText
+            style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+            android:id="@+id/etTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_edit_text"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_blue_24dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/hint_date_format"
+            android:inputType="none"
+            android:padding="5dp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etJumlahBarang"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/bg_edit_text"
-        android:inputType="number"
-        android:padding="5dp"
-        android:singleLine="true" />
+        <DatePicker
+            android:id="@+id/datepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:scaleX="1"
+            android:scaleY="0.9"
+            android:visibility="gone" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/hint_pemasok" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/hint_jumlah_barang" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etPemasok"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/bg_edit_text"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:singleLine="true" />
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+            android:id="@+id/etJumlahBarang"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_edit_text"
+            android:inputType="number"
+            android:padding="5dp"
+            tools:text="100"
+            android:singleLine="true" />
 
-    <Button
-        android:id="@+id/button_save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/button_save"
-        android:textColor="@color/buttonLabel" />
-</LinearLayout>
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/hint_pemasok" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+            android:id="@+id/etPemasok"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_edit_text"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            tools:text="Indofood"
+            android:singleLine="true" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_save"
+            android:onClick="saveToDB"
+            android:textColor="@color/buttonLabel" />
+    </LinearLayout>
+</layout>

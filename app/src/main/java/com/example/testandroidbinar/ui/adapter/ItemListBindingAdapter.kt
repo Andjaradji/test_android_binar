@@ -16,9 +16,6 @@ class ItemListBindingAdapter :ListAdapter<Item,ItemListBindingAdapter.ItemViewHo
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = getItem(position)
-//        holder.itemView.setOnClickListener {
-//            clickListener.onClick(marsProperty)
-//        }
         holder.bind(item)
     }
 

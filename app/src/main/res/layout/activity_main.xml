@@ -48,7 +48,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:listData="@{viewmodel.allItems}"
-                tools:listitem="@layout/recyclerview_item"/>
+                tools:listitem="@layout/rv_item"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

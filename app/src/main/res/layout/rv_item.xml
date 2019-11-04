@@ -23,7 +23,7 @@
 
             <TextView
                 android:id="@+id/tvNamaBarang"
-                style="@style/item_title"
+                style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_dark"
@@ -38,6 +38,7 @@
 
             <TextView
                 android:id="@+id/textView_tanggal"
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -48,6 +49,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNamaBarang" />
 
             <TextView
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:id="@+id/tvTanggal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -59,6 +61,7 @@
 
 
             <TextView
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:id="@+id/textView_jumlah"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -72,6 +75,7 @@
 
 
             <TextView
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:id="@+id/tvJumlahBarang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,6 +88,7 @@
 
 
             <TextView
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:id="@+id/textView_pemasok"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -97,6 +102,7 @@
 
 
             <TextView
+                style="@style/TextAppearance.AppCompat.Menu"
                 android:id="@+id/tvPemasokBarang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
