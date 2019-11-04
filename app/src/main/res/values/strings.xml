@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TestAndroidBinar</string>
+    <string name="hint_nama">Nama Barang</string>
+    <string name="hint_tanggal">Tanggal</string>
+    <string name="hint_jumlah_barang">Jumlah Barang</string>
+    <string name="hint_pemasok">Pemasok</string>
+    <string name="button_save">Save</string>
+    <string name="hint_date_format">dd/mm/yyyy</string>
+    <string name="empty_not_saved">Item not saved because it is empty.</string>
+    <string name="tanggal_dipasok">Tanggal dipasok:</string>
+    <string name="jumlah_barang">Jumlah Barang:</string>
+    <string name="pemasok">Pemasok :</string>
+    <string name="delete_all">Delete all items</string>
+</resources>
