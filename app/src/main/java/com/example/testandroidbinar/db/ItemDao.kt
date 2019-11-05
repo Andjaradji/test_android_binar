@@ -1,10 +1,7 @@
 package com.example.testandroidbinar.db
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.testandroidbinar.model.Item
 
 
@@ -19,4 +16,7 @@ interface ItemDao {
 
     @Query("DELETE FROM item_table")
     suspend fun deleteAll()
+
+    @Delete
+    suspend fun deleteItem(item:Item)
 }

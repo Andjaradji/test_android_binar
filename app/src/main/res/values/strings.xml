@@ -11,4 +11,7 @@
     <string name="jumlah_barang">Jumlah Barang:</string>
     <string name="pemasok">Pemasok :</string>
     <string name="delete_all">Delete all items</string>
+
+    <string name="delete_warning">Anda yakin menghapus item ini?</string>
+    <string name="message_ok">OK</string>
 </resources>

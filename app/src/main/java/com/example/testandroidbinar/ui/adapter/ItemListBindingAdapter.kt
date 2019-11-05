@@ -39,9 +39,9 @@ class ItemListBindingAdapter :ListAdapter<Item,ItemListBindingAdapter.ItemViewHo
 
     }
 
-//    class onClickListener (val clickListener: (item:Item)->Unit){
-//        fun onClick(item: Item) = clickListener(item)
-//    }
+    internal fun getItemById(swipedPosition: Int): Item {
+        return getItem(swipedPosition)
+    }
 
 
 }

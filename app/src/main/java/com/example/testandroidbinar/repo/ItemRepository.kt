@@ -15,4 +15,10 @@ class ItemRepository(private val itemDao: ItemDao) {
     suspend fun deleteAll(){
         itemDao.deleteAll()
     }
+
+    suspend fun deleteItem(item: Item){
+        itemDao.deleteItem(item)
+    }
+
+
 }
