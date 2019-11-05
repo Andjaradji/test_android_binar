@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
              val swipedPosition = viewHolder.adapterPosition
             val item:Item = rvAdapter.getItemById(swipedPosition)
-            showDialogDeleteItem(item)
+            showAlertDeleteDialog("Delete Item Warning","Are you sure want to delete this item?") {itemViewModel.deleteItem(item)}
 
         }
     })
@@ -95,40 +95,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-                R.id.delete_all_menu -> showDialogDeleteAllItems()
+                R.id.delete_all_menu -> showAlertDeleteDialog("Delete All Items Warning","Are you sure want to delete all items?") {itemViewModel.deleteAll()}
         }
 
         return true
     }
 
 
-    private fun showDialogDeleteAllItems(){
+
+    private fun showAlertDeleteDialog(title:String,message:String, operation:()->Unit){
         val alertDialog = AlertDialog.Builder(this)
 
         with(alertDialog)
         {
-            setTitle("Delete All Items Warning")
-            setMessage("Are you sure want to delete all items?")
+            setTitle(title)
+            setMessage(message)
             setPositiveButton("Yes") { _:DialogInterface, _:Int ->
-                itemViewModel.deleteAll()
-            }
-            setNegativeButton("No") { dialog:DialogInterface, _:Int ->
-                dialog.dismiss()
-            }
-            show()
-        }
-
-    }
-
-    private fun showDialogDeleteItem(item:Item){
-        val alertDialog = AlertDialog.Builder(this)
-
-        with(alertDialog)
-        {
-            setTitle("Delete Item Warning")
-            setMessage("Are you sure want to delete this item?")
-            setPositiveButton("Yes") { _:DialogInterface, _:Int ->
-                itemViewModel.deleteItem(item)
+                operation.invoke()
             }
             setNegativeButton("No") { dialog:DialogInterface, _:Int ->
                 mainBinding.recyclerview.adapter?.notifyDataSetChanged()
